@@ -1,0 +1,35 @@
+<div class="bg">
+  <div class="parent">
+    <mat-card class="child">
+      <div class="logo">
+        <h1><a>Pictura <span>#</span></a></h1>
+      </div>
+      <div class="intro-text">
+        <h2>Welcome Back!</h2>
+        <p>SIGN-IN</p>
+      </div>
+      <form [formGroup]="validateForm" (ngSubmit)="submitLoginForm()" id="loginForm">
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="E-mail" formControlName="email" required />
+          <mat-error *ngIf="validateForm.get('email')?.invalid">The input is not valid E-mail!</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" color="warn">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" type="password" formControlName="password" required />
+          <mat-error *ngIf="validateForm.get('password')?.invalid">The input is not valid Password!</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" class="login-btn">LOGIN</button>
+      </form>
+      <div class="already-account">
+        <a routerLink="/register">Not have an Account?</a>
+        <a>Forgot Password</a>
+      </div>
+      <div class="social-login">
+        <button mat-raised-button class="social-btn google">Google</button>
+      </div>
+    </mat-card>
+  </div>
+</div>

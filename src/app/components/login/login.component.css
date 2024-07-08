@@ -1,0 +1,22 @@
+
+@media (max-width: 1024px) {
+    div[style*="background-image"] {
+        background-size: 60% !important;
+        background-position: top left 100px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    div[style*="background-image"] {
+        background-size: 70% !important;
+        background-position: top left 50px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    div[style*="background-image"] {
+        background-size: 80% !important;
+        background-position: top left 20px !important;
+    }
+}
+
